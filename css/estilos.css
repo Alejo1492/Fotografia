@@ -7,7 +7,7 @@ header{
   background-color: #5b7989;
   border-radius: 10px 10px 0 0;
   color: #fff;
-  text-shadow: 2px 0.5px #02010A;
+  text-shadow: 2px 2px #02010A;
   display: flex;
   flex-flow: row wrap;
 }
@@ -22,7 +22,21 @@ nav ul > li{
 nav ul li > a{
   text-decoration: none;
   color: #fff;
-  text-shadow: 2px 0.5px #02010A;
+  text-shadow: 2px 2px #02010A;
+}
+#imagen-central{
+  text-align: center;
+  background: #82c3a6;
+  margin: 0 auto;
+}
+.contenedor-imagen-principal{
+  width: 80%;
+  margin: 0 auto;
+  padding: 30px;
+}
+picture img{
+  width:100%;
+  box-shadow: 2px 2px #02010a;
 }
 @media all and (min-width:900px) {
   header{
@@ -38,6 +52,10 @@ nav ul li > a{
   }
   nav ul > li{
     padding: 26px 0 0 0;
+  }
+  #imagen-central{
+    width: 80%;
+    margin: 0 auto;
   }
 }
 @media all and (max-width:900px) {
@@ -55,5 +73,9 @@ nav ul li > a{
   nav{
     width: 100%;
     text-align: center;
+  }
+  #imagen-central{
+    width: 97%;
+    margin: 0 auto;
   }
 }
