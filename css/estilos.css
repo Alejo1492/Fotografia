@@ -11,9 +11,6 @@ header{
   display: flex;
   flex-flow: row wrap;
 }
-#titulo-cabecera h1{
-  padding:10px 0 0 15px;
-}
 nav ul > li{
   display: inline-block;
   margin-right: 30px;
@@ -60,19 +57,43 @@ figure > a{
   transform: translate(5px,-20px);
   box-shadow:  2px 2px #82c3a6;
 }
+footer{
+  display: flex;
+  flex-flow: row wrap;
+  color: #000;
+  border-radius: 0 0 10px 10px;
+  background: #C6d5c5;
+}
+footer div>p{
+  margin: 2px 20px 2px 20px;
+}
+footer div>h2{
+  margin-left: 20px;
+}
+.footer-bloque3 p>img{
+  box-shadow: none;
+}
 @media all and (min-width:900px) {
-  header, #imagen-central,#contenido{
-    width: 80%;
+  #contenedor{
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header, #imagen-central,#contenido,footer{
+    width: 100%;
     margin: 0 auto;
   }
   #titulo-cabecera, nav,.contenedor-imagen-secundaria{
     width: 50%;
   }
+  #titulo-cabecera h1{
+    padding: 0 0 0 20px;
+    font-size: 1.32em;
+  }
   nav{
     text-align: right;
   }
   nav ul > li{
-    padding: 26px 0 0 0;
+    padding: auto;
   }
   .contenedor-imagen-secundaria >figure{
     padding: 25px;
@@ -80,13 +101,24 @@ figure > a{
   .contenedor-imagen-secundaria figure > img{
     width: 100%;
   }
+  footer div{
+    width: 25%;
+    font-size: 0.8em;
+    margin-bottom: 30px;
+  }
+  .footer-bloque3 p>img{
+    width: 10%;
+  }
 }
 
 @media all and (max-width:900px) {
+  #contenedor{
+    width: 100%;
+  }
   body{
     font-size: 6vw;
   }
-  header, #imagen-central, #contenido{
+  header, #imagen-central, #contenido,footer{
     width: 97%;
     margin: 0 auto;
   }
@@ -102,5 +134,15 @@ figure > a{
   }
   .contenedor-imagen-secundaria figure>img{
     width: 100%;
+  }
+  footer>div{
+    width: 100%;
+    font-size:3.5vw;
+  }
+  .footer-bloque4{
+    margin-bottom: 30px;
+  }
+  .footer-bloque3 p>img{
+    width: 3.5vw;
   }
 }
