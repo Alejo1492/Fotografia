@@ -1,7 +1,7 @@
 body{
   font-family: 'Dancing Script', cursive;
   background: #000;
-  font-size: 1em;
+  font-size: 1.5em;
 }
 header{
   background-color: #5b7989;
@@ -34,48 +34,73 @@ nav ul li > a{
   margin: 0 auto;
   padding: 30px;
 }
-picture img{
-  width:100%;
+img{
   box-shadow: 2px 2px #02010a;
+  width: 100%;
+}
+#contenido{
+  display: flex;
+  flex-flow: row wrap;
+  background: #D5C75F;
+}
+.contenedor-imagen-secundaria{
+  text-align: center;
+}
+figure > a{
+  color: #000;
+}
+.imagen-secundaria1 img:hover{
+  transform: rotate(10deg);
+  box-shadow:  2px 2px #82c3a6;
+}
+.imagen-secundaria1 img,.imagen-secundaria2 img{
+  transition: transform 1s;
+}
+.imagen-secundaria2 img:hover{
+  transform: translate(5px,-20px);
+  box-shadow:  2px 2px #82c3a6;
 }
 @media all and (min-width:900px) {
-  header{
+  header, #imagen-central,#contenido{
     width: 80%;
     margin: 0 auto;
   }
-  #titulo-cabecera{
+  #titulo-cabecera, nav,.contenedor-imagen-secundaria{
     width: 50%;
   }
   nav{
-    width: 50%;
     text-align: right;
   }
   nav ul > li{
     padding: 26px 0 0 0;
   }
-  #imagen-central{
-    width: 80%;
-    margin: 0 auto;
+  .contenedor-imagen-secundaria >figure{
+    padding: 25px;
+  }
+  .contenedor-imagen-secundaria figure > img{
+    width: 100%;
   }
 }
+
 @media all and (max-width:900px) {
-  header{
+  body{
+    font-size: 6vw;
+  }
+  header, #imagen-central, #contenido{
     width: 97%;
     margin: 0 auto;
   }
-  #titulo-cabecera{
+  #titulo-cabecera, nav{
     width: 100%;
     text-align: center;
   }
   #titulo-cabecera h1{
     margin: 0 auto;
   }
-  nav{
+  .contenedor-imagen-secundaria{
     width: 100%;
-    text-align: center;
   }
-  #imagen-central{
-    width: 97%;
-    margin: 0 auto;
+  .contenedor-imagen-secundaria figure>img{
+    width: 100%;
   }
 }
