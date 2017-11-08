@@ -5,11 +5,15 @@ body{
 }
 header{
   background-color: #5b7989;
+  -webkit-border-radius: 10px 10px 0 0;
+  -moz-border-radius: 10px 10px 0 0;
   border-radius: 10px 10px 0 0;
   color: #fff;
   text-shadow: 2px 2px #02010A;
   display: flex;
+  display: -webkit-flex;
   flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
 }
 nav ul > li{
   display: inline-block;
@@ -32,10 +36,14 @@ nav ul li > a{
   padding: 30px;
 }
 img{
+  -webkit-box-shadow: 2px 2px #02010a;
+  -moz-box-shadow: 2px 2px #02010a;
   box-shadow: 2px 2px #02010a;
   width: 100%;
 }
 #contenido, #galeria-fotografias{
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
   display: flex;
   flex-flow: row wrap;
   background: #D5C75F;
@@ -47,20 +55,40 @@ figure > a{
   color: #000;
 }
 .imagen-secundaria1 img:hover{
+  -webkit-transform: rotate(10deg);
+  -moz-transform: rotate(10deg);
+  -o-transform: rotate(10deg);
+  -ms-transform: rotate(10deg);
   transform: rotate(10deg);
+  -moz-box-shadow:  2px 2px #82c3a6;
+  -webkit-box-shadow:  2px 2px #82c3a6;
   box-shadow:  2px 2px #82c3a6;
 }
 .imagen-secundaria1 img,.imagen-secundaria2 img{
+  -webkit-transition: transform 1s;
+  -moz-transition: transform 1s;
+  -o-transition: transform 1s;
+  -ms-transition: transform 1s;
   transition: transform 1s;
 }
 .imagen-secundaria2 img:hover{
+  -webkit-transform: translate(5px,-20px);
+  -moz-transform: translate(5px,-20px);
+  -ms-transform: translate(5px,-20px);
+  -o-transform: translate(5px,-20px);
   transform: translate(5px,-20px);
+  -moz-box-shadow:  2px 2px #82c3a6;
+  -webkit-box-shadow:  2px 2px #82c3a6;
   box-shadow:  2px 2px #82c3a6;
 }
 footer{
+  display: -webkit-flex;
+  -webkit-flex-flow: row wrap;
   display: flex;
   flex-flow: row wrap;
   color: #000;
+  -webkit-border-radius: 0 0 10px 10px;
+  -moz-border-radius: 0 0 10px 10px;
   border-radius: 0 0 10px 10px;
   background: #C6d5c5;
 }
@@ -71,16 +99,22 @@ footer div>h2{
   margin-left: 20px;
 }
 .footer-bloque3 p>img{
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
-img[src="img/paisaje1.jpg"],img[src="img/retrato1.jpg"]{
+#galeria-fotografias figure>img[src="img/paisaje1.jpg"],
+#galeria-fotografias figure>img[src="img/retrato1.jpg"]{
+  -webkit-filter: blur(10px);
   filter: blur(10px);
 }
 img[src="img/paisaje3.jpg"],img[src="img/retrato3.jpg"]{
+  -webkit-filter: sepia(90%);
   filter: sepia(90%);
 }
 img[src="img/paisaje2.jpg"],img[src="img/paisaje4.jpg"],img[src="img/paisaje6.jpg"],
 img[src="img/retrato2.jpg"],img[src="img/retrato4.jpg"],img[src="img/retrato6.jpg"]{
+  -webkit-filter: grayscale(100%);
   filter: grayscale(100%);
 }
 @media all and (min-width:900px) {
