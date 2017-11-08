@@ -35,12 +35,12 @@ img{
   box-shadow: 2px 2px #02010a;
   width: 100%;
 }
-#contenido{
+#contenido, #galeria-fotografias{
   display: flex;
   flex-flow: row wrap;
   background: #D5C75F;
 }
-.contenedor-imagen-secundaria{
+.contenedor-imagen-secundaria,.contenedor-galeria{
   text-align: center;
 }
 figure > a{
@@ -73,12 +73,22 @@ footer div>h2{
 .footer-bloque3 p>img{
   box-shadow: none;
 }
+img[src="img/paisaje1.jpg"],img[src="img/retrato1.jpg"]{
+  filter: blur(10px);
+}
+img[src="img/paisaje3.jpg"],img[src="img/retrato3.jpg"]{
+  filter: sepia(90%);
+}
+img[src="img/paisaje2.jpg"],img[src="img/paisaje4.jpg"],img[src="img/paisaje6.jpg"],
+img[src="img/retrato2.jpg"],img[src="img/retrato4.jpg"],img[src="img/retrato6.jpg"]{
+  filter: grayscale(100%);
+}
 @media all and (min-width:900px) {
   #contenedor{
     max-width: 900px;
     margin: 0 auto;
   }
-  header, #imagen-central,#contenido,footer{
+  header, #imagen-central,#contenido,footer,#galeria-fotografias{
     width: 100%;
     margin: 0 auto;
   }
@@ -95,10 +105,10 @@ footer div>h2{
   nav ul > li{
     padding: auto;
   }
-  .contenedor-imagen-secundaria >figure{
+  .contenedor-imagen-secundaria > figure{
     padding: 25px;
   }
-  .contenedor-imagen-secundaria figure > img{
+  .contenedor-imagen-secundaria figure > img, .contenedor-galeria figure > img{
     width: 100%;
   }
   footer div{
@@ -109,6 +119,12 @@ footer div>h2{
   .footer-bloque3 p>img{
     width: 10%;
   }
+  .contenedor-galeria{
+    width: 33.33%;
+  }
+  .contenedor-galeria > figure{
+    margin:15px;
+  }
 }
 
 @media all and (max-width:900px) {
@@ -118,7 +134,7 @@ footer div>h2{
   body{
     font-size: 6vw;
   }
-  header, #imagen-central, #contenido,footer{
+  header, #imagen-central, #contenido,footer,#galeria-fotografias{
     width: 97%;
     margin: 0 auto;
   }
@@ -129,10 +145,10 @@ footer div>h2{
   #titulo-cabecera h1{
     margin: 0 auto;
   }
-  .contenedor-imagen-secundaria{
+  .contenedor-imagen-secundaria,.contenedor-galeria{
     width: 100%;
   }
-  .contenedor-imagen-secundaria figure>img{
+  .contenedor-imagen-secundaria figure>img,.contenedor-galeria figure>img{
     width: 100%;
   }
   footer>div{
